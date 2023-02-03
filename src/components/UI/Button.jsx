@@ -2,10 +2,12 @@ import React from "react";
 
 import styled from "styled-components";
 
-const Button = ({ children, onClick }) => {
+const Button = ({ children, onClick, disabled }) => {
   return (
     <div>
-      <StyledButton onClick={onClick}>{children}</StyledButton>
+      <StyledButton disabled={disabled} onClick={onClick}>
+        {children}
+      </StyledButton>
     </div>
   );
 };

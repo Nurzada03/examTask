@@ -80,10 +80,18 @@ const MainContent = () => {
       <Input type="number" value={state.input} onChange={handleInputChange} />
       <ListCalculator state={state} />
       <ContainerButton>
-        <Button onClick={plusClick}>+</Button>
-        <Button onClick={minusClick}>-</Button>
-        <Button onClick={multiplYClick}>*</Button>
-        <Button onClick={divideClick}>/</Button>
+        <Button disabled={!state.input} onClick={plusClick}>
+          +
+        </Button>
+        <Button disabled={!state.input} onClick={minusClick}>
+          -
+        </Button>
+        <Button disabled={!state.input} onClick={multiplYClick}>
+          *
+        </Button>
+        <Button disabled={!state.input} onClick={divideClick}>
+          /
+        </Button>
       </ContainerButton>
     </Container>
   );
